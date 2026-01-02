@@ -1,0 +1,7 @@
+jdk:
+  - openjdk17
+before_install:
+  - sed -i 's/\r$//' gradlew
+  - chmod +x gradlew
+install:
+  - ./gradlew :Pronotekt:publishReleasePublicationToMavenLocal
