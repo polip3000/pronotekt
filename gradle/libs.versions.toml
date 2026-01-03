@@ -11,6 +11,7 @@ ktor = "3.3.3"
 jsoup = "1.21.2"
 okhttp = "4.12.0"
 desugarJdkLibs = "2.1.5"
+junit4 = "4.13.2"
 
 
 [libraries]
@@ -25,6 +26,8 @@ ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serializatio
 jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugarJdkLibs" }
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 
 
 [plugins]

@@ -61,6 +61,9 @@ dependencies {
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
     implementation libs.kotlin.reflect
+
+    testImplementation(libs.junit4)
+    testImplementation(libs.kotlin.test)
 }
 def androidSourcesJar = tasks.register('androidSourcesJar', org.gradle.jvm.tasks.Jar) {
     archiveClassifier.set('sources')
@@ -70,7 +73,7 @@ def androidSourcesJar = tasks.register('androidSourcesJar', org.gradle.jvm.tasks
 afterEvaluate {
     publishing {
         publications {
-            create("release", org.gradle.api.publish.maven.MavenPublication) {
+            create("release", MavenPublication) {
                 from(components["release"])
                 artifact(androidSourcesJar.get().archiveFile) {
                     builtBy(androidSourcesJar)
